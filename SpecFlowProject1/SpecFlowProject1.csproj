@@ -25,6 +25,7 @@
     
     <PackageReference Include="FluentAssertions" Version="5.10.3" />
     
+    <PackageReference Include="ExtentReports" Version="4.1.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -56,4 +57,7 @@
     </SpecFlowFeatureFiles>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="ExtentReports" />
+  </ItemGroup>
 </Project>

@@ -23,5 +23,10 @@ namespace SpecFlowProject1.Common_Functions
         {
             return Hooks1._webDriver.FindElement(control).Displayed;
         }
+
+        public void Clear(By control)
+        {
+            Hooks1._webDriver.FindElement(control).Clear();
+        }
     }
 }
