@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ExtentReports" Version="4.1.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
     <PackageReference Include="Selenium.Support" Version="4.0.0-alpha07" />
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="90.0.4430.2400" />
@@ -25,7 +26,6 @@
     
     <PackageReference Include="FluentAssertions" Version="5.10.3" />
     
-    <PackageReference Include="ExtentReports" Version="4.1.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -57,7 +57,4 @@
     </SpecFlowFeatureFiles>
   </ItemGroup>
 
-  <ItemGroup>
-    <None Remove="ExtentReports" />
-  </ItemGroup>
 </Project>

@@ -16,18 +16,18 @@ namespace SpecFlowProject1.Object_Repository
 
         //Home Page
         public static By TShirtTab = By.XPath("//ul[@class='sf-menu clearfix menu-content sf-js-enabled sf-arrows']/li/following-sibling::li/a[contains(text(),'T-shirts')]");
-        
+
         public static By TshirtImage = By.XPath("//*[@alt='Faded Short Sleeve T-shirts' and @title]");
 
+        public static By AddToKart = By.XPath("//*[@title='Add to cart']");
 
-        public static By AddToKart = By.XPath("//span[contains(text(),'Add to cart')]");
         public static By ProceedToCheckOut = By.XPath("//span[contains(text(),'Proceed to checkout')]");
 
         public static By ProceedToCheckOutSummaryButton = By.XPath("//p[@class='cart_navigation clearfix']/a[@title='Proceed to checkout']");
 
-        public static By ProceedToCheckOutAtAddress = By.XPath("//*[@id='center_column']/form/p/button/span");
+        public static By ProceedToCheckOutAtAddress = By.Name("processAddress");
 
-        public static By ProceedToCheckOutAtShipping = By.XPath("//*[@id='form']/p/button/span");
+        public static By ProceedToCheckOutAtShipping = By.Name("processCarrier");
 
         public static By TermsCondition = By.Id("cgv");
 
@@ -53,7 +53,6 @@ namespace SpecFlowProject1.Object_Repository
         public static By LastName = By.Id("lastname");
 
         public static By SaveButton = By.Name("submitIdentity");
-
 
     }
 }

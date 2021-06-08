@@ -1,4 +1,6 @@
-﻿using SpecFlowProject1.Common_Functions;
+﻿using AventStack.ExtentReports;
+using SpecFlowProject1.Common_Functions;
+using SpecFlowProject1.Hooks;
 using System;
 using TechTalk.SpecFlow;
 
@@ -7,36 +9,136 @@ namespace SpecFlowProject1.Steps
     [Binding]
     public class ShoppingWebsiteSteps
     {
-        SignInPage objSignIn = new SignInPage();
+        ShoppingWebsiteMethods objShoppingWebsiteMethods = new ShoppingWebsiteMethods();
 
         [Given(@"User Login to the website with userNmae ""(.*)"" and Password ""(.*)""")]
         public void GivenUserLoginToTheWebsiteWithUserNmaeAndPassword(string p0, string p1)
         {
-            objSignIn.SingnIn(p0, p1);
+            try
+            {
+                objShoppingWebsiteMethods.SingnIn(p0, p1);
+            }
+            catch (Exception e)
+            {
+                Hooks1.test.Log(Status.Fail, e.Message);
+                Hooks1.exceptions.Add(e.Message);
+            }
+            finally
+            {
+                Hooks1.TakeScreenshot("User SinIn succesfully");
+            }
         }
 
-
-        [Then(@"User Clicks on TShirt Tab")]
-        public void ThenUserClicksOnTShirtTab()
+        [When(@"User navigates to the Tshirt tab")]
+        public void WhenUserNavigatesToTheTshirtTab()
         {
-            objSignIn.ClickOnTShirtTab();
+            try
+            {
+                objShoppingWebsiteMethods.ClickOnTShirtTab();
+            }
+            catch (Exception e)
+            {
+                Hooks1.test.Log(Status.Fail, e.Message);
+                Hooks1.exceptions.Add(e.Message);
+            }
+            finally
+            {
+                Hooks1.TakeScreenshot("User navigated to Tshirt Tab");
+            }
         }
 
-        [Then(@"selects the Tshirt")]
-        public void ThenSelectsTheTshirt()
+        [Then(@"User selects the Tshirt")]
+        public void ThenUserSelectsTheTshirt()
         {
-            objSignIn.ClickOnTShirtImage();
-            objSignIn.ClickAddToKart();
+            try
+            {
+                objShoppingWebsiteMethods.ClickAddToKart();
+            }
+            catch (Exception e)
+            {
+                Hooks1.test.Log(Status.Fail, e.Message);
+                Hooks1.exceptions.Add(e.Message);
+            }
+            finally
+            {
+                Hooks1.TakeScreenshot("User has selected the tshirt");
+            }
         }
 
-        [Then(@"user proceed to Checkout")]
-        public void ThenUserProceedToCheckout()
+        [Then(@"User book the Tshirt from the shopping kart")]
+        public void ThenUserBookTheTshirtFromTheShoppingKart()
         {
-            objSignIn.ClickProccedToCheckOut();
-            objSignIn.ClickProccedToCheckOutAtSummary();
-            objSignIn.ShippingPage();
-            objSignIn.PaymentPage();
+            try
+            {
+                objShoppingWebsiteMethods.ClickProccedToCheckOut();
+                objShoppingWebsiteMethods.ClickProccedToCheckOutAtSummary();
+                objShoppingWebsiteMethods.ClickProccedToCheckOutAtAddress();
+                objShoppingWebsiteMethods.ShippingPage();
+                objShoppingWebsiteMethods.PaymentPage();
+            }
+            catch (Exception e)
+            {
+                Hooks1.test.Log(Status.Fail, e.Message);
+                Hooks1.exceptions.Add(e.Message);
+            }
+            finally
+            {
+                Hooks1.TakeScreenshot("User has successfully checkout the tshirt from the cart");
+            }
+        }
 
+        [Then(@"User verify the order History ""(.*)""")]
+        public void ThenUserVerifyTheOrderHistory(string p0)
+        {
+            try
+            {
+                objShoppingWebsiteMethods.VerifyOrderHistory(p0);
+            }
+            catch (Exception e)
+            {
+                Hooks1.test.Log(Status.Fail, e.Message);
+                Hooks1.exceptions.Add(e.Message);
+            }
+            finally
+            {
+                Hooks1.TakeScreenshot("User verified the order in order history");
+            }
+        }
+
+        [When(@"User Navigates to Personal Information")]
+        public void WhenUserNavigatesToPersonalInformation()
+        {
+            try
+            {
+                objShoppingWebsiteMethods.ClickOnPersonalInformationTab();
+            }
+            catch (Exception e)
+            {
+                Hooks1.test.Log(Status.Fail, e.Message);
+                Hooks1.exceptions.Add(e.Message);
+            }
+            finally
+            {
+                Hooks1.TakeScreenshot("User has clicked on personal Information");
+            }
+        }
+
+        [Then(@"User fills the details ""(.*)"" ""(.*)""")]
+        public void ThenUserFillsTheDetails(string p0, string p1)
+        {
+            try
+            {
+                objShoppingWebsiteMethods.EnterUserDestails(p0, p1);
+            }
+            catch (Exception e)
+            {
+                Hooks1.test.Log(Status.Fail, e.Message);
+                Hooks1.exceptions.Add(e.Message);
+            }
+            finally
+            {
+                Hooks1.TakeScreenshot("User has entered the details");
+            }
         }
 
 

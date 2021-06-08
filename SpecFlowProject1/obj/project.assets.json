@@ -9894,7 +9894,6 @@
       "path": "system.threading.tasks.parallel/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -10399,25 +10398,27 @@
     ]
   },
   "packageFolders": {
-    "/Users/swatiacharya/.nuget/packages/": {}
+    "C:\\Users\\Juhi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/swatiacharya/Downloads/SpecFlowProject1/SpecFlowProject1/SpecFlowProject1.csproj",
+      "projectUniqueName": "C:\\Users\\Juhi\\source\\repos\\SpecFlowProject1\\SpecFlowProject1\\SpecFlowProject1.csproj",
       "projectName": "SpecFlowProject1",
-      "projectPath": "/Users/swatiacharya/Downloads/SpecFlowProject1/SpecFlowProject1/SpecFlowProject1.csproj",
-      "packagesPath": "/Users/swatiacharya/.nuget/packages/",
-      "outputPath": "/Users/swatiacharya/Downloads/SpecFlowProject1/SpecFlowProject1/obj/",
+      "projectPath": "C:\\Users\\Juhi\\source\\repos\\SpecFlowProject1\\SpecFlowProject1\\SpecFlowProject1.csproj",
+      "packagesPath": "C:\\Users\\Juhi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Juhi\\source\\repos\\SpecFlowProject1\\SpecFlowProject1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/swatiacharya/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Juhi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://sfa-gov-uk.pkgs.visualstudio.com/_packaging/dct-pkg/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -10487,7 +10488,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
